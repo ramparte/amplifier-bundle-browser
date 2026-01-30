@@ -7,7 +7,7 @@ bundle:
   license: Apache-2.0
 
 includes:
-  - bundle: foundation:behaviors/developer
+  - bundle: foundation
 
 context:
   browser-automation-guide:
