@@ -10,8 +10,10 @@ includes:
   - bundle: foundation:behaviors/developer
 
 context:
-  - context/browser-automation-guide.md
-  - context/patterns.md
+  browser-automation-guide:
+    path: context/browser-automation-guide.md
+  patterns:
+    path: context/patterns.md
 ---
 
 # Browser Automation Bundle
