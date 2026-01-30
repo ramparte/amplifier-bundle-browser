@@ -1,22 +1,17 @@
 ---
 bundle:
   name: browser
-  version: 0.1.2
+  version: 0.1.3
   description: Token-efficient web automation and UX testing using agent-browser
   author: Amplifier Community
   license: Apache-2.0
 
 includes:
   - bundle: foundation
+  - bundle: browser:behaviors/browser
 ---
 
 # Browser Automation Bundle
-
-@browser:context/agent-browser-awareness.md
-@browser:context/browser-automation-guide.md
-@browser:context/patterns.md
-
----
 
 Token-efficient web automation for AI agents using [agent-browser](https://github.com/vercel-labs/agent-browser).
 

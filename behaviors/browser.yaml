@@ -1,0 +1,10 @@
+bundle:
+  name: browser-behavior
+  version: 0.1.0
+  description: Browser automation with agent-browser
+
+context:
+  include:
+    - browser:context/agent-browser-awareness.md
+    - browser:context/browser-automation-guide.md
+    - browser:context/patterns.md
