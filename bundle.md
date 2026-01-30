@@ -5,6 +5,13 @@ bundle:
   description: Token-efficient web automation and UX testing using agent-browser
   author: Amplifier Community
   license: Apache-2.0
+
+includes:
+  - bundle: foundation:behaviors/developer
+
+context:
+  - context/browser-automation-guide.md
+  - context/patterns.md
 ---
 
 # Browser Automation Bundle
