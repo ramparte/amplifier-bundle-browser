@@ -1,19 +1,38 @@
 ---
 bundle:
   name: browser
-  version: 0.1.3
+  version: 0.2.0
   description: Token-efficient web automation and UX testing using agent-browser
   author: Amplifier Community
   license: Apache-2.0
 
 includes:
   - bundle: foundation
-  - bundle: browser:behaviors/browser
 ---
 
 # Browser Automation Bundle
 
 Token-efficient web automation for AI agents using [agent-browser](https://github.com/vercel-labs/agent-browser).
+
+---
+
+## Agent Instructions
+
+@browser:context/agent-browser-awareness.md
+
+---
+
+## Complete Reference
+
+@browser:context/browser-automation-guide.md
+
+---
+
+## Common Patterns
+
+@browser:context/patterns.md
+
+---
 
 ## What This Provides
 
@@ -78,11 +97,6 @@ agent-browser screenshot result.png
 agent-browser close
 ```
 
-## Context Files
-
-- **context/browser-automation-guide.md** - Complete usage instructions
-- **context/patterns.md** - Common workflows and best practices
-
 ## Use Cases
 
 - **UX Testing**: Validate UI components and flows
@@ -99,18 +113,6 @@ agent-browser close
 | Setup complexity | JSON config required | Zero config |
 | Element selection | CSS/XPath (fragile) | Deterministic refs |
 | AI-friendly | No | Yes (designed for LLMs) |
-
-## Architecture
-
-```
-Rust CLI (command parsing)
-    ↓
-Node.js Daemon (browser management)
-    ↓
-Chromium/Playwright (automation)
-```
-
-The daemon persists between commands for instant subsequent operations.
 
 ## Session Isolation
 
@@ -137,29 +139,8 @@ agent-browser --profile ~/.myapp-profile open myapp.com
 agent-browser --profile ~/.myapp-profile open myapp.com/dashboard
 ```
 
-## Cloud Deployment
-
-For serverless environments, use cloud browser providers:
-
-```bash
-# Browserbase
-export BROWSERBASE_API_KEY="key"
-export BROWSERBASE_PROJECT_ID="id"
-agent-browser -p browserbase open https://example.com
-
-# Browser Use
-export BROWSER_USE_API_KEY="key"
-agent-browser -p browseruse open https://example.com
-
-# Kernel
-export KERNEL_API_KEY="key"
-agent-browser -p kernel open https://example.com
-```
-
 ## Documentation
 
-- [Context Guide](context/browser-automation-guide.md) - Complete instructions
-- [Common Patterns](context/patterns.md) - Workflow examples
 - [Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues
 - [Upstream Docs](https://github.com/vercel-labs/agent-browser) - Full API reference
 
